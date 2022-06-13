@@ -60,7 +60,7 @@ h2 {
 .header__nav a {
   text-decoration: none;
   color: #fff;
-  transition: all 0.2s;
+  transition: all 1s;
 }
 .header__nav a.--active {
   color: #3a3845;
