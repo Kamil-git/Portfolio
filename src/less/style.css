@@ -91,6 +91,8 @@ h2 {
   display: flex;
   flex-direction: column;
   text-align: center;
+  background-image: linear-gradient(to bottom right, #eee6ce, #fff);
+  color: #3a3845;
 }
 .projects__container {
   display: grid;
@@ -107,6 +109,6 @@ h2 {
   width: 100%;
   text-align: center;
   padding: 80px;
-  background-color: #eee6ce;
   color: #3a3845;
+  background-image: linear-gradient(to bottom right, #eee6ce, #2EB086);
 }
