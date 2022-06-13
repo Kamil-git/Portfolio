@@ -46,12 +46,23 @@ h2 {
 }
 //--header--
 
-.header {
+#header {
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 0fr 0fr 2fr;
   background-image: linear-gradient(to bottom right, #3a3845, #313552);
-
+    &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-row: 2/3;
+    grid-column: 1;
+    //--header__text__button--
+    &__button {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
   //--header__text--
   &__nav {
     display: flex;
@@ -74,18 +85,7 @@ h2 {
       }
     }
   }
-  &__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-row: 2/3;
-    grid-column: 1;
-    //--header__text__button--
-    &__button {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
+
   //--header__nav--
 
   //--header__socials--
@@ -99,7 +99,7 @@ h2 {
 }
 
 //--aboutme--
-.aboutme {
+#aboutme {
   display: flex;
   padding: 80px;
   flex-direction: column;
@@ -108,19 +108,21 @@ h2 {
   color: @font-color-2;
   align-items: center;
   height: 100vh;
+
   p {
     font-size: @h2;
     font-weight: 400;
   }
 }
 //--projects--
-.projects {
+#projects {
   padding: 80px;
   display: flex;
   flex-direction: column;
   text-align: center;
   background-image: linear-gradient(to bottom right, #eee6ce, #fff);
   color: @font-color-2;
+  height: 100vh;
   &__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -128,7 +130,7 @@ h2 {
     gap: 20px;
     grid-auto-rows: 300px;
     grid-auto-columns: 500px;
-    height: 100vh;
+    
     &__card {
       display: flex;
       flex-direction: column;
@@ -172,7 +174,7 @@ h2 {
   }
 }
 //--footer--
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;

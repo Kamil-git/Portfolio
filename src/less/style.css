@@ -39,13 +39,24 @@ h2 {
   font-size: 35px;
   font-weight: 400;
 }
-.header {
+#header {
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 0fr 0fr 2fr;
   background-image: linear-gradient(to bottom right, #3a3845, #313552);
 }
-.header__nav {
+#header__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row: 2/3;
+  grid-column: 1;
+}
+#header__text__button {
+  color: #fff;
+  text-decoration: none;
+}
+#header__nav {
   display: flex;
   right: 0;
   list-style: none;
@@ -54,36 +65,25 @@ h2 {
   margin-right: 5px;
   position: fixed;
 }
-.header__nav div {
+#header__nav div {
   margin: 10px;
 }
-.header__nav a {
+#header__nav a {
   text-decoration: none;
   color: #fff;
   transition: all 1s;
 }
-.header__nav a.--active {
+#header__nav a.--active {
   color: #3a3845;
 }
-.header__text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  grid-row: 2/3;
-  grid-column: 1;
-}
-.header__text__button {
-  color: #fff;
-  text-decoration: none;
-}
-.header__socials {
+#header__socials {
   display: flex;
   grid-column: 4;
   grid-row: 2/3;
   justify-content: flex-end;
   margin-right: 10px;
 }
-.aboutme {
+#aboutme {
   display: flex;
   padding: 80px;
   flex-direction: column;
@@ -93,34 +93,34 @@ h2 {
   align-items: center;
   height: 100vh;
 }
-.aboutme p {
+#aboutme p {
   font-size: 35px;
   font-weight: 400;
 }
-.projects {
+#projects {
   padding: 80px;
   display: flex;
   flex-direction: column;
   text-align: center;
   background-image: linear-gradient(to bottom right, #eee6ce, #fff);
   color: #3a3845;
+  height: 100vh;
 }
-.projects__container {
+#projects__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 500px);
   gap: 20px;
   grid-auto-rows: 300px;
   grid-auto-columns: 500px;
-  height: 100vh;
 }
-.projects__container__card {
+#projects__container__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 5px 5px 20px #c5c3c3;
 }
-.projects__container__card__image {
+#projects__container__card__image {
   margin-top: 25px;
   width: 250px;
   border-radius: 125px;
@@ -154,7 +154,7 @@ h2 {
   background-image: linear-gradient(to bottom right, #3a3845, #313552);
   content: "";
 }
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
