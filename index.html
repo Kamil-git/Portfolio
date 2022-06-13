@@ -5,25 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/less/style.css" />
-      <script
-			  src="https://code.jquery.com/jquery-3.6.0.min.js"
-			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-			  crossorigin="anonymous"></script>
+
     <title>[Portfolio]</title>
   </head>
   <body>
-    <div class="header">
+    <div class="header" id="header">
+      <div class="header__nav">
+        <div class="btn-animated"><a href="#aboutme">About me</a></div>
+        <div class="btn-animated"><a href="#projects">Projects</a></div>
+        <div class="btn-animated"><a href="#footer">Contact</a></div>
+      </div>
       <div class="header__text">
         <a class="header__text__button btn-animated" href="#aboutme"
           ><h1>Kamil Kwiatkowski</h1>
           <h2>Full Stack Developer</h2></a
         >
       </div>
-      <div class="header__nav">
-        <div class="btn-animated"><a href="#aboutme">About me</a></div>
-        <div class="btn-animated"><a href="#projects">Projects</a></div>
-        <div class="btn-animated"><a href="#footer">Contact</a></div>
-      </div>
+      
       <div class="header__socials">
         <a
           class="header__socials__github"
@@ -43,7 +41,7 @@
         </a>
       </div>
     </div>
-    <div class="aboutme content-section" id="aboutme">
+    <div class="aboutme" id="aboutme">
       <h1>About Me</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -52,7 +50,7 @@
         commodo consequat.
       </p>
     </div>
-    <div class="projects content-section" id="projects">
+    <div class="projects" id="projects" >
       <h1>Projects</h1>
       <div class="projects__container">
         <div class="projects__container__card">
@@ -117,7 +115,7 @@
         </div>
       </div>
     </div>
-    <div class="footer content-section" id="footer">
+    <div class="footer" id="footer" >
       <h1>Contact me</h1>
       <h2>Kwiatkowski.kamil.618@gmail.com</h2>
     </div>

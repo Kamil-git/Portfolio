@@ -10,6 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
+  scroll-behavior: smooth;
 }
 .btn-animated {
   transition: 0.3s;
@@ -44,6 +45,22 @@ h2 {
   grid-template-columns: 2fr 0fr 0fr 2fr;
   background-image: linear-gradient(to bottom right, #3a3845, #313552);
 }
+.header__nav {
+  display: flex;
+  right: 0;
+  list-style: none;
+  justify-content: flex-end;
+  font-size: 35px;
+  margin-right: 5px;
+  position: fixed;
+}
+.header__nav div {
+  margin: 10px;
+}
+.header__nav a {
+  text-decoration: none;
+  color: #fff;
+}
 .header__text {
   display: flex;
   flex-direction: column;
@@ -55,26 +72,16 @@ h2 {
   color: #fff;
   text-decoration: none;
 }
-.header__nav {
-  display: flex;
-  grid-column: 4;
-  list-style: none;
-  justify-content: flex-end;
-  font-size: 35px;
-  margin-right: 5px;
-}
-.header__nav div {
-  margin: 10px;
-}
-.header__nav a {
-  text-decoration: none;
-  color: #fff;
-}
 .header__socials {
   display: flex;
   grid-column: 4;
+  grid-row: 2/3;
   justify-content: flex-end;
   margin-right: 10px;
+}
+.active {
+  text-decoration: none;
+  color: #3a3845 !important;
 }
 .aboutme {
   display: flex;
