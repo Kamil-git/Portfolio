@@ -61,7 +61,7 @@ h2 {
   text-decoration: none;
   color: #fff;
 }
-.header__nav .active {
+.header__nav a.--active {
   text-decoration: none;
   color: #3a3845;
 }

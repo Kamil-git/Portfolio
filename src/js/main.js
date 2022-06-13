@@ -12,7 +12,7 @@ const projects = document.querySelector("#projects")
 
 // checkVisible(projects)
 
-window.addEventListener('scroll', function(){
+window.addEventListener("scroll", function () {
   switch (
     !(
       projects.getBoundingClientRect().bottom < 0 ||
@@ -22,19 +22,17 @@ window.addEventListener('scroll', function(){
     )
   ) {
     case true:
-      for(i=0; i < navbar.length; i++ ){
-        navbar[i].classList.add('active')
-        
+      for (i = 0; i < navbar.length; i++) {
+        navbar[i].classList.add("--active")
       }
-      console.log('true')
+
       break
     case false:
       for (i = 0; i < navbar.length; i++) {
-        navbar[i].classList.remove("active")
+        navbar[i].classList.remove("--active")
       }
-      console.log("false")
+
       break
     default:
-    
-  } 
+  }
 })
