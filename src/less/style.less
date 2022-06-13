@@ -5,29 +5,36 @@
   box-sizing: border-box;
   font-family: "Ubuntu", sans-serif;
 }
-
+//---h1--h2
+@h1: 70px;
+@h2: 35px;
+h1 {
+  font-size: @h1;
+  margin: 40px 0px 40px 0px;
+  font-weight: 600;
+}
+h2 {
+  font-size: @h2;
+  font-weight: 400;
+}
+//--header--
 .header {
   height: 100vh;
   display: grid;
   grid-template-columns: 2fr 0fr 0fr 2fr;
   background-image: linear-gradient(to bottom right, #3a3845, #313552);
-//text
+  //--header__text--
   &__text {
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-row: 2/3;
     grid-column: 1;
+    //--header__text__button--
     &__button {
       transition: 0.3s;
       color: #fff;
       text-decoration: none;
-      h1 {
-        font-size: 90px;
-      }
-      h3 {
-        font-size: 45px;
-      }
 
       &:hover {
         animation: heartbeat 1s infinite;
@@ -48,13 +55,13 @@
       }
     }
   }
-  // nav
+  //--header__nav--
   &__nav {
     display: flex;
     grid-column: 4;
     list-style: none;
     justify-content: flex-end;
-    font-size: 35px;
+    font-size: @h2;
     margin-right: 5px;
     div {
       margin: 10px;
@@ -64,11 +71,51 @@
       color: #fff;
     }
   }
-  //socials
+  //--header__socials--
   &__socials {
     display: flex;
     grid-column: 4;
     justify-content: flex-end;
     margin-right: 10px;
   }
+}
+//--aboutme--
+.aboutme {
+  display: flex;
+  padding: 80px;
+  flex-direction: column;
+  background-color: #b8405e;
+  color: #fff;
+  align-items: center;
+  p {
+    font-size: @h2;
+    font-weight: 400;
+  }
+}
+//--projects--
+.projects {
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 500px);
+    gap: 20px;
+    grid-auto-rows: 300px;
+    grid-auto-columns: 500px;
+    &__card {
+      box-shadow: 5px 5px 20px rgb(197, 195, 195);
+    }
+  }
+}
+//--footer--
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 80px;
+  background-color: #eee6ce;
+  color: #3a3845;
 }
