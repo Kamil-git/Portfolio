@@ -72,16 +72,16 @@ h2 {
   color: #fff;
   text-decoration: none;
 }
+.header .active {
+  text-decoration: none;
+  color: #3a3845 !important;
+}
 .header__socials {
   display: flex;
   grid-column: 4;
   grid-row: 2/3;
   justify-content: flex-end;
   margin-right: 10px;
-}
-.active {
-  text-decoration: none;
-  color: #3a3845 !important;
 }
 .aboutme {
   display: flex;
