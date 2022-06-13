@@ -94,6 +94,7 @@ h2 {
   background-image: linear-gradient(to bottom right, #b8405e, #eee6ce);
   color: @font-color-2;
   align-items: center;
+  height: 100vh;
   p {
     font-size: @h2;
     font-weight: 400;
@@ -114,6 +115,7 @@ h2 {
     gap: 20px;
     grid-auto-rows: 300px;
     grid-auto-columns: 500px;
+    height: 100vh;
     &__card {
       display: flex;
       flex-direction: column;
@@ -158,8 +160,13 @@ h2 {
 }
 //--footer--
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   width: 100%;
-  text-align: center;
+
   padding: 80px;
 
   color: @font-color-2;
@@ -167,5 +174,3 @@ h2 {
 }
 
 //--scroll--
-
-
