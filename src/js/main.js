@@ -1,4 +1,4 @@
-const navbar = document.querySelectorAll(".header__nav > div > a")
+const navbar = document.querySelectorAll("header > div > a")
 const projects = document.querySelector("#projects")
 
 // function checkVisible(elm) {
