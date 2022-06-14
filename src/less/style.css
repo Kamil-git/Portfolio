@@ -66,6 +66,24 @@ h2 {
     font-size: 35px;
   }
 }
+h3 {
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  h3 {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 70px;
+  }
+}
 header {
   display: flex;
   right: 0;
@@ -156,29 +174,11 @@ header a.--active {
   align-items: center;
   height: 100vh;
 }
-#aboutme h3 {
-  font-size: 20px;
-}
-@media (min-width: 768px) {
-  #aboutme h3 {
-    font-size: 30px;
-  }
-}
-@media (min-width: 992px) {
-  #aboutme h3 {
-    font-size: 60px;
-  }
-}
-@media (min-width: 1200px) {
-  #aboutme h3 {
-    font-size: 70px;
-  }
-}
-#aboutme p {
+p {
   font-weight: 400;
 }
 @media (min-width: 768px) {
-  #aboutme p {
+  p {
     margin: 0px 20px 0px 20px;
   }
 }
@@ -295,4 +295,22 @@ footer {
   padding: 80px;
   color: #3a3845;
   background-image: linear-gradient(to bottom right, #eee6ce, #2eb086);
+}
+footer p {
+  font-size: 10px;
+}
+@media (min-width: 768px) {
+  footer p {
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) {
+  footer p {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  footer p {
+    font-size: 35px;
+  }
 }

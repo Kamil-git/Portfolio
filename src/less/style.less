@@ -36,34 +36,42 @@
   }
 }
 
-
-
-
-
-
-h1{
+h1 {
   font-size: 20px;
-  @media @tablet{
+  @media @tablet {
     font-size: 30px;
   }
-  @media @laptop{
+  @media @laptop {
     font-size: 60px;
   }
-  @media @desktop{
-    font-size:70px;
+  @media @desktop {
+    font-size: 70px;
   }
 }
-h2{
+h2 {
   font-size: 10px;
-  @media @tablet{
+  @media @tablet {
     font-size: 15px;
   }
-  @media @laptop{
+  @media @laptop {
     font-size: 30px;
   }
-  @media @desktop{
-   font-size: 35px;
- }
+  @media @desktop {
+    font-size: 35px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  @media @tablet {
+    font-size: 30px;
+  }
+  @media @laptop {
+    font-size: 60px;
+  }
+  @media @desktop {
+    font-size: 70px;
+  }
 }
 //--content
 
@@ -88,16 +96,16 @@ header {
     &.--active {
       color: @font-color-2;
     }
-      font-size: 10px;
-  @media @tablet{
-    font-size: 15px;
-  }
-  @media @laptop{
-    font-size: 30px;
-  }
-  @media @desktop{
-   font-size: 35px;
- }
+    font-size: 10px;
+    @media @tablet {
+      font-size: 15px;
+    }
+    @media @laptop {
+      font-size: 30px;
+    }
+    @media @desktop {
+      font-size: 35px;
+    }
   }
 }
 
@@ -157,26 +165,14 @@ header {
   color: @font-color-2;
   align-items: center;
   height: 100vh;
-  h3{
-    font-size: 20px;
-  @media @tablet{
-    font-size: 30px;
-  }
-  @media @laptop{
-    font-size: 60px;
-  }
-  @media @desktop{
-    font-size:70px;
-  }
-  }
-  p {
-    font-weight: 400;
-    @media @tablet{
-      margin: 0px 20px 0px 20px;
-    }
-    
+}
+p {
+  font-weight: 400;
+  @media @tablet {
+    margin: 0px 20px 0px 20px;
   }
 }
+
 //--projects--
 #projects {
   display: flex;
@@ -185,7 +181,7 @@ header {
   text-align: center;
   background-image: linear-gradient(to bottom right, #eee6ce, #fff);
   color: @font-color-2;
-  
+
   @media @tablet {
     padding: 20px;
   }
@@ -211,7 +207,7 @@ header {
       grid-template-rows: repeat(1, 500px);
       gap: 20px;
     }
-    
+
     &__card {
       display: flex;
       flex-direction: column;
@@ -282,6 +278,18 @@ footer {
 
   color: @font-color-2;
   background-image: linear-gradient(to bottom right, #eee6ce, #2eb086);
+  p {
+    font-size: 10px;
+    @media @tablet {
+      font-size: 15px;
+    }
+    @media @laptop {
+      font-size: 30px;
+    }
+    @media @desktop {
+      font-size: 35px;
+    }
+  }
 }
 
 //--scroll--
