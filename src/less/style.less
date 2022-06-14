@@ -14,7 +14,7 @@
 @font-color-2: #3a3845;
 
 //--buttons--
-.btn-animated {
+.btn--animated {
   transition: 0.3s;
 
   &:hover {
@@ -35,48 +35,35 @@
     }
   }
 }
-//---h1--h2
-@desktop__h1: 70px;
-@desktop__h2: 35px;
 
-@laptop__h1: 60px;
-@laptop__h2: 30px;
 
-@tablet__h1: 50px;
-@tablet__h2: 25px;
 
-@media @desktop {
-  h1 {
-    font-size: @desktop__h1;
-    margin: 40px 0px 40px 0px;
-    font-weight: 600;
+
+
+
+h1{
+  font-size: 20px;
+  @media @tablet{
+    font-size: 30px;
   }
-  h2 {
-    font-size: @desktop__h2;
-    font-weight: 400;
+  @media @laptop{
+    font-size: 60px;
+  }
+  @media @desktop{
+    font-size:70px;
   }
 }
-@media @laptop {
-  h1 {
-    font-size: @laptop__h1;
-    margin: 40px 0px 40px 0px;
-    font-weight: 600;
+h2{
+  font-size: 10px;
+  @media @tablet{
+    font-size: 15px;
   }
-  h2 {
-    font-size: @laptop__h2;
-    font-weight: 400;
+  @media @laptop{
+    font-size: 30px;
   }
-}
-@media @tablet {
-  h1 {
-    font-size: @tablet__h1;
-    margin: 40px 0px 40px 0px;
-    font-weight: 600;
-  }
-  h2 {
-    font-size: @tablet__h2;
-    font-weight: 400;
-  }
+  @media @desktop{
+   font-size: 35px;
+ }
 }
 //--content
 
@@ -90,20 +77,10 @@ header {
   margin-right: 5px;
   position: fixed;
   grid-area: header;
-  @media @desktop {
-    font-size: @desktop__h2;
-  }
-  @media @laptop {
-    font-size: @laptop__h2;
-  }
-  @media @tablet {
-    font-size: @tablet__h2;
-  }
 
-  div {
+  .btn--animated {
     margin: 10px;
   }
-
   a {
     text-decoration: none;
     color: #fff;
@@ -111,6 +88,16 @@ header {
     &.--active {
       color: @font-color-2;
     }
+      font-size: 10px;
+  @media @tablet{
+    font-size: 15px;
+  }
+  @media @laptop{
+    font-size: 30px;
+  }
+  @media @desktop{
+   font-size: 35px;
+ }
   }
 }
 
@@ -119,7 +106,7 @@ header {
   height: 100vh;
   background-image: linear-gradient(to bottom right, #3a3845, #313552);
 
-  @media @desktop {
+  @media @tablet {
     display: grid;
     grid-template-columns: 2fr 0fr 0fr 2fr;
   }
@@ -127,7 +114,7 @@ header {
     display: grid;
     grid-template-columns: 2fr 0fr 0fr 2fr;
   }
-  @media @tablet {
+  @media @desktop {
     display: grid;
     grid-template-columns: 2fr 0fr 0fr 2fr;
   }
@@ -170,18 +157,24 @@ header {
   color: @font-color-2;
   align-items: center;
   height: 100vh;
-
+  h3{
+    font-size: 20px;
+  @media @tablet{
+    font-size: 30px;
+  }
+  @media @laptop{
+    font-size: 60px;
+  }
+  @media @desktop{
+    font-size:70px;
+  }
+  }
   p {
     font-weight: 400;
-    @media @desktop {
-      font-size: @desktop__h2;
+    @media @tablet{
+      margin: 0px 20px 0px 20px;
     }
-    @media @laptop {
-      font-size: @laptop__h2;
-    }
-    @media @tablet {
-      font-size: @tablet__h2;
-    }
+    
   }
 }
 //--projects--
@@ -192,15 +185,15 @@ header {
   text-align: center;
   background-image: linear-gradient(to bottom right, #eee6ce, #fff);
   color: @font-color-2;
-  height: 100vh;
-  @media @desktop {
-    padding: 80px;
+  
+  @media @tablet {
+    padding: 20px;
   }
   @media @laptop {
     padding: 60px;
   }
-  @media @tablet {
-    padding: 20px;
+  @media @desktop {
+    padding: 80px;
   }
 
   &__container {
@@ -208,20 +201,17 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 
-    @media @desktop {
-      grid-template-columns: repeat(4, 1fr) !important;
-      grid-auto-rows: 300px;
-      grid-auto-columns: 500px;
-      gap: 20px;
-    }
     @media @laptop {
       grid-template-columns: repeat(4, 1fr) !important;
+      grid-template-rows: repeat(1, 500px);
       gap: 20px;
     }
-    @media @tablet {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+    @media @desktop {
+      grid-template-columns: repeat(4, 1fr) !important;
+      grid-template-rows: repeat(1, 500px);
+      gap: 20px;
     }
+    
     &__card {
       display: flex;
       flex-direction: column;
@@ -231,7 +221,7 @@ header {
         margin-top: 5px;
         width: 100px;
         border-radius: 50px;
-        @media @desktop {
+        @media @tablet {
           margin-top: 5px;
           width: 100px;
           border-radius: 50px;
@@ -241,7 +231,7 @@ header {
           width: 100px;
           border-radius: 50px;
         }
-        @media @tablet {
+        @media @desktop {
           margin-top: 5px;
           width: 100px;
           border-radius: 50px;
