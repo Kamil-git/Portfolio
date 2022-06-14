@@ -79,10 +79,7 @@
   }
 }
 //--content
-body{
-  display: flex;
-  flex-direction: column;
-}
+
 //--header--
 
 header {
@@ -92,6 +89,7 @@ header {
   justify-content: flex-end;
   margin-right: 5px;
   position: fixed;
+  grid-area: header;
   @media @desktop {
     font-size: @desktop__h2;
   }
@@ -117,10 +115,23 @@ header {
 }
 
 #socials {
-  height: 100vh;
   display: grid;
-  grid-template-columns: 2fr 0fr 0fr 2fr;
+  height: 100vh;
   background-image: linear-gradient(to bottom right, #3a3845, #313552);
+
+  @media @desktop {
+    display: grid;
+    grid-template-columns: 2fr 0fr 0fr 2fr;
+  }
+  @media @laptop {
+    display: grid;
+    grid-template-columns: 2fr 0fr 0fr 2fr;
+  }
+  @media @tablet {
+    display: grid;
+    grid-template-columns: 2fr 0fr 0fr 2fr;
+  }
+
   &__text {
     display: flex;
     flex-direction: column;
@@ -146,7 +157,9 @@ header {
     margin-right: 10px;
   }
 }
-
+#content {
+  grid-area: main;
+}
 //--aboutme--
 #aboutme {
   display: flex;
@@ -173,39 +186,41 @@ header {
 }
 //--projects--
 #projects {
-  padding: 80px;
   display: flex;
   flex-direction: column;
+  padding: 20px;
   text-align: center;
   background-image: linear-gradient(to bottom right, #eee6ce, #fff);
   color: @font-color-2;
   height: 100vh;
+  @media @desktop {
+    padding: 80px;
+  }
+  @media @laptop {
+    padding: 60px;
+  }
+  @media @tablet {
+    padding: 20px;
+  }
+
   &__container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
     @media @desktop {
-      display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 500px);
-    gap: 20px;
-    grid-auto-rows: 300px;
-    grid-auto-columns: 500px;
+      grid-template-columns: repeat(4, 1fr) !important;
+      grid-auto-rows: 300px;
+      grid-auto-columns: 500px;
+      gap: 20px;
     }
     @media @laptop {
-    display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(1, 500px);
-    gap: 20px;
-    grid-auto-rows: 300px;
-    grid-auto-columns: 500px;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 20px;
     }
     @media @tablet {
-       display: grid;
-    grid-template-columns: repeat(2, 4fr);
-    grid-template-rows: repeat(1, 500px);
-    gap: 20px;
-    grid-auto-rows: 300px;
-    grid-auto-columns: 500px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
     &__card {
       display: flex;
@@ -213,10 +228,24 @@ header {
       align-items: center;
       box-shadow: 5px 5px 20px rgb(197, 195, 195);
       &__image {
-        margin-top: 25px;
-        width: 250px;
-        border-radius: 125px;
-        background-color: @font-color-2;
+        margin-top: 5px;
+        width: 100px;
+        border-radius: 50px;
+        @media @desktop {
+          margin-top: 5px;
+          width: 100px;
+          border-radius: 50px;
+        }
+        @media @laptop {
+          margin-top: 5px;
+          width: 100px;
+          border-radius: 50px;
+        }
+        @media @tablet {
+          margin-top: 5px;
+          width: 100px;
+          border-radius: 50px;
+        }
       }
     }
   }
@@ -251,6 +280,7 @@ header {
 }
 //--footer--
 footer {
+  grid-area: footer;
   display: flex;
   flex-direction: column;
   justify-content: center;
