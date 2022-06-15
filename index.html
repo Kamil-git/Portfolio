@@ -11,19 +11,25 @@
 
   <body>
     <header>
-      <div class="btn--animated"><a href="#aboutme">About me</a></div>
-      <div class="btn--animated"><a href="#projects">Projects</a></div>
-      <div class="btn--animated"><a href="#contact">Contact</a></div>
+      <div class="btn--animated">
+        <a class="header__nav__link" href="#aboutme">About me</a>
+      </div>
+      <div class="btn--animated">
+        <a class="header__nav__link" href="#projects">Projects</a>
+      </div>
+      <div class="btn--animated">
+        <a class="header__nav__link" href="#contact">Contact</a>
+      </div>
     </header>
     <div id="content">
       <section id="socials">
         <div id="socials__text">
           <a id="socials__text__button" class="btn--animated" href="#aboutme">
-            <h1>Kamil Kwiatkowski</h1>
-            <h2>Full Stack Developer</h2>
+            <h1 class="section__h1">Kamil Kwiatkowski</h1>
+            <h2 class="section__h2">Full Stack Developer</h2>
           </a>
         </div>
-        
+
         <div id="socials__icons">
           <a
             id="header__socials__github"
@@ -44,8 +50,8 @@
         </div>
       </section>
       <section id="aboutme">
-        <h3>About Me</h3>
-        <p>
+        <h3 class="section__title">About Me</h3>
+        <p class="text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -53,76 +59,67 @@
         </p>
       </section>
       <section id="projects">
-        <h3>Projects</h3>
+        <h3 class="section__title">Projects</h3>
         <div id="projects__container">
           <div id="projects__container__card">
-            <img
-              id="projects__container__card__image"
-              src="./icons/react.svg"
-              alt=""
-            />
-            <p>My biggest project</p>
+            <img class="card__image" src="./icons/react.svg" alt="" />
+            <p class="card__label">My biggest project</p>
             <p class="card__text">
               For this application i used MongoDB , Nodejs, Express, React and
               Material-UI
             </p>
-            <p class="card__link btn-animated">
-              <a href="https://kamilreactproject.herokuapp.com/"
-                >View Project</a
-              >
-            </p>
+            <a
+              class="card__link btn--animated"
+              href="https://kamilreactproject.herokuapp.com/"
+              >View Project</a
+            >
           </div>
           <div id="projects__container__card">
-            <img
-              id="projects__container__card__image"
-              src="./icons/react.svg"
-              alt=""
-            />
-            <p>Project</p>
+            <img class="card__image" src="./icons/react.svg" alt="" />
+            <p class="card__label">Project</p>
             <p class="card__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <p class="card__link btn-animated">
-              <a href="https://github.com/Kamil-git/Portfolio">View Project</a>
-            </p>
+            <a
+              class="card__link btn--animated"
+              href="https://github.com/Kamil-git/Portfolio"
+              >View Project</a
+            >
           </div>
           <div id="projects__container__card">
-            <img
-              id="projects__container__card__image"
-              src="./icons/react.svg"
-              alt=""
-            />
-            <p>Project</p>
+            <img class="card__image" src="./icons/react.svg" alt="" />
+            <p class="card__label">Project</p>
             <p class="card__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <p class="card__link btn-animated">
-              <a href="https://github.com/Kamil-git/Portfolio">View Project</a>
-            </p>
+
+            <a
+              class="card__link btn--animated"
+              href="https://github.com/Kamil-git/Portfolio"
+              >View Project</a
+            >
           </div>
           <div id="projects__container__card">
-            <img
-              id="projects__container__card__image"
-              src="./icons/react.svg"
-              alt=""
-            />
-            <p>Project</p>
+            <img class="card__image" src="./icons/react.svg" alt="" />
+            <p class="card__label">Project</p>
             <p class="card__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <p class="card__link btn-animated">
-              <a href="https://github.com/Kamil-git/Portfolio">View Project</a>
-            </p>
+            <a
+              class="card__link btn--animated"
+              href="https://github.com/Kamil-git/Portfolio"
+              >View Project</a
+            >
           </div>
         </div>
       </section>
     </div>
     <footer id="contact">
-      <h3>Contact me</h3>
-      <p>Kwiatkowski.kamil.618@gmail.com</p>
+      <h3 class="section__title">Contact me</h3>
+      <p class="footer__label">Kwiatkowski.kamil.618@gmail.com</p>
     </footer>
     <script src="./src/js/main.js"></script>
   </body>
