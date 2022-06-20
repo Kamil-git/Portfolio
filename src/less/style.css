@@ -196,7 +196,6 @@ header .header__nav__link.--active {
   text-align: center;
   background-image: linear-gradient(to bottom right, #eee6ce, #fff);
   color: #3a3845;
-  min-height: 100vh;
 }
 @media (min-width: 768px) {
   #projects {
@@ -297,17 +296,10 @@ header .header__nav__link.--active {
 .card__link {
   text-align: center;
   margin-top: 40px;
-  font-size: 30px;
+  font-size: 15px;
   margin: 20px 10px 20px 10px;
   color: #3a3845;
   text-decoration: none;
-}
-.card__link::after {
-  height: 1px;
-  display: block;
-  width: 100%;
-  background-image: linear-gradient(to bottom right, #3a3845, #313552);
-  content: "";
 }
 footer {
   grid-area: footer;
