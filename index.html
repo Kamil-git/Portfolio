@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="nav">
       <div class="btn--animated">
         <a class="header__nav__link" href="#aboutme">About me</a>
       </div>
@@ -50,28 +50,37 @@
         </div>
       </section>
       <section id="aboutme">
-        <h3 class="section__title">About Me</h3>
-        <p class="text">
-          I work to make a better web; one that is fast, easy to use, beautiful,
-          accessible to all, and frustration-free. Regardless of your specific
-          business requirements, in solving these challenges, you have a great
-          chance of finding success online. I use HTML, CSS, and JavaScript to
-          produce responsive websites and web apps that provide users the best
-          and most appropriate experience suited to their device and browser. I
-          write standards based code that is semantic, accessible, search-engine
-          friendly, easy to maintain, cross browser compatible, and performant.
-          For backend development i prefer NodeJs and Typescript.Node.js because it really
-          shines in building fast, scalable network applications, offers
-          benefits in performance, faster development, and other perks. Today’s
-          requirements for processing and consuming real-time information are
-          paramount, and Node.js is exceptionally fast for multi-user real-time
-          data situations.
-        </p>
+        <main>
+          <h3 class="section__title">About Me</h3>
+          <p class="text">
+            I work to make a better web; one that is fast, easy to use,
+            beautiful, accessible to all, and frustration-free. Regardless of
+            your specific business requirements, in solving these challenges,
+            you have a great chance of finding success online. I use HTML, CSS,
+            and JavaScript to produce responsive websites and web apps that
+            provide users the best and most appropriate experience suited to
+            their device and browser. I write standards based code that is
+            semantic, accessible, search-engine friendly, easy to maintain,
+            cross browser compatible, and performant. For backend development i
+            prefer NodeJs and Typescript.Node.js because it really shines in
+            building fast, scalable network applications, offers benefits in
+            performance, faster development, and other perks. Today’s
+            requirements for processing and consuming real-time information are
+            paramount, and Node.js is exceptionally fast for multi-user
+            real-time data situations.
+          </p>
+        </main>
       </section>
       <section id="projects">
-        <h3 class="section__title">Projects</h3>
+        <h3 class="section__title" >Projects</h3>
+        
+        <div class="projects__wrapper">
+          <button class="projects__button--prev">&#8592;</button>
+          <button class="projects__button--next">&#8594;</button>
+        </div>
+
         <div id="projects__container">
-          <div id="projects__container__card">
+          <div id="projects__container__card" data-active1>
             <img class="card__image" src="./icons/react.svg" alt="" />
             <p class="card__label">Photo Album</p>
             <p class="card__text">
@@ -84,7 +93,7 @@
               >View Project</a
             >
           </div>
-          <div id="projects__container__card">
+          <div id="projects__container__card" data-active2>
             <img class="card__image" src="./icons/react.svg" alt="" />
             <p class="card__label">Project</p>
             <p class="card__text">
@@ -97,7 +106,7 @@
               >View Project</a
             >
           </div>
-          <div id="projects__container__card">
+          <div id="projects__container__card" data-active3>
             <img class="card__image" src="./icons/react.svg" alt="" />
             <p class="card__label">Project</p>
             <p class="card__text">
@@ -111,7 +120,7 @@
               >View Project</a
             >
           </div>
-          <div id="projects__container__card">
+          <div id="projects__container__card" data-active4>
             <img class="card__image" src="./icons/react.svg" alt="" />
             <p class="card__label">Project</p>
             <p class="card__text">

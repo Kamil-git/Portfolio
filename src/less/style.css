@@ -84,14 +84,27 @@
     font-size: 70px;
   }
 }
+body {
+  --nav-height: 70px;
+}
+.nav {
+  height: var(--nav-height);
+  transition: 1s;
+}
+.nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+  box-shadow: none;
+}
 header {
   display: flex;
-  right: 0;
+  width: 100%;
   list-style: none;
   justify-content: flex-end;
-  margin-right: 5px;
   position: fixed;
   grid-area: header;
+}
+header .--active {
+  color: #313552;
 }
 header .btn--animated {
   margin: 10px;
@@ -174,6 +187,9 @@ header .header__nav__link.--active {
   align-items: center;
   height: 100vh;
 }
+#aboutme main {
+  padding: 150px;
+}
 @media (min-width: 768px) {
   #aboutme .text {
     font-size: 20px;
@@ -193,9 +209,10 @@ header .header__nav__link.--active {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  text-align: center;
+  justify-content: center;
   background-image: linear-gradient(to bottom right, #eee6ce, #fff);
   color: #3a3845;
+  min-height: 100vh;
 }
 @media (min-width: 768px) {
   #projects {
@@ -212,30 +229,39 @@ header .header__nav__link.--active {
     padding: 80px;
   }
 }
+#projects .projects__wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+#projects .projects__wrapper button {
+  width: 100px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  font-size: 24px;
+}
 #projects__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  display: flex;
+  overflow-x: scroll;
+  width: fit-content;
+  overflow: hidden;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
 }
 @media (min-width: 992px) {
-  #projects__container {
-    grid-template-columns: repeat(4, 1fr) !important;
-    grid-template-rows: repeat(1, 500px);
-    gap: 20px;
-  }
 }
 @media (min-width: 1200px) {
-  #projects__container {
-    grid-template-columns: repeat(4, 1fr) !important;
-    grid-template-rows: repeat(1, 500px);
-    gap: 20px;
-  }
 }
 #projects__container__card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 5px 5px 20px #c5c3c3;
+  flex-shrink: 0;
+  height: 600px;
+  width: 100%;
 }
 .card__label {
   font-weight: 600;

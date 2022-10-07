@@ -74,18 +74,29 @@
   }
 }
 //--content
-
+body {
+  --nav-height: 70px;
+}
 //--header--
+.nav {
+  height: var(--nav-height);
+  transition: 1s;
+}
+.nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
 
+  box-shadow: none;
+}
 header {
   display: flex;
-  right: 0;
+  width: 100%;
   list-style: none;
   justify-content: flex-end;
-  margin-right: 5px;
   position: fixed;
   grid-area: header;
-
+  .--active {
+    color: #313552;
+  }
   .btn--animated {
     margin: 10px;
   }
@@ -161,6 +172,9 @@ header {
   color: @font-color-2;
   align-items: center;
   height: 100vh;
+  main {
+    padding: 150px;
+  }
   .text {
     @media @tablet {
       font-size: 20px;
@@ -179,10 +193,11 @@ header {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  text-align: center;
+  justify-content: center;
   background-image: linear-gradient(to bottom right, #eee6ce, #fff);
   color: @font-color-2;
-
+  min-height: 100vh;
+  
   @media @tablet {
     padding: 20px;
   }
@@ -192,29 +207,56 @@ header {
   @media @desktop {
     padding: 80px;
   }
-
+  .projects__wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    button {
+      width: 100px;
+      outline: none;
+      cursor: pointer;
+      border: none;
+      background-color: inherit;
+      font-size: 24px;
+    }
+  }
   &__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // gap: 10px;
+    display: flex;
+    overflow-x: scroll;
+    width: fit-content;
+    overflow: hidden;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
 
     @media @laptop {
-      grid-template-columns: repeat(4, 1fr) !important;
-      grid-template-rows: repeat(1, 500px);
-      gap: 20px;
+      // grid-template-columns: repeat(4, 1fr) !important;
+      // grid-template-rows: repeat(1, 500px);
+      // gap: 20px;
     }
     @media @desktop {
-      grid-template-columns: repeat(4, 1fr) !important;
-      grid-template-rows: repeat(1, 500px);
-      gap: 20px;
+      // grid-template-columns: repeat(4, 1fr) !important;
+      // grid-template-rows: repeat(1, 500px);
+      // gap: 20px;
     }
 
     &__card {
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 5px 5px 20px rgb(197, 195, 195);
+      flex-shrink: 0;
+      height: 600px;
+      width: 100%;
+      
+      
+      // box-shadow: 5px 5px 20px rgb(197, 195, 195);
+      
+      
     }
+
   }
 }
 
@@ -270,7 +312,6 @@ header {
   margin: 20px 10px 20px 10px;
   color: @font-color-2;
   text-decoration: none;
-  
 }
 //--footer--
 footer {
