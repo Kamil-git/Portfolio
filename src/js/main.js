@@ -71,17 +71,18 @@ function carousel() {
     document.querySelector("[data-active4]").getBoundingClientRect().x - 80
   
   return buttonNext.addEventListener("click", () => {
-    switch (slideContainer.scrollLeft) {
-      case 0:
+    
+    switch (true) {
+      case slideContainer.scrollLeft <= slideItem1:
         slideContainer.scrollTo(slideItem2, 0)
         break
-      case slideItem2:
+      case slideContainer.scrollLeft <= slideItem2:
         slideContainer.scrollTo(slideItem3, 0)
         break
-      case slideItem3:
+      case slideContainer.scrollLeft <= slideItem3:
         slideContainer.scrollTo(slideItem4, 0)
         break
-      case slideItem4:
+      case slideContainer.scrollLeft <= slideItem4:
         slideContainer.scrollTo(slideItem1, 0)
         break
     }

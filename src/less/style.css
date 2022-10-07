@@ -247,9 +247,8 @@ header .header__nav__link.--active {
   display: flex;
   overflow-x: scroll;
   width: fit-content;
-  overflow: hidden;
-  transition: 200ms opacity ease-in-out;
-  transition-delay: 200ms;
+  transition: 1s opacity ease-in-out;
+  transition-duration: 1s;
 }
 @media (min-width: 992px) {
 }
