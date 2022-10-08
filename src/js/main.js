@@ -40,23 +40,7 @@ function scrollYChangeColor() {
   })
 }
 
-function projectsCarousel() {
-  const buttons = document.querySelectorAll("[data-carousel-button]")
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const offset = button.dataset.carouselButton === "next" ? 1 : -1
-      const slides = button
-        .closest("[data-carousel]")
-        .querySelector("[data-slides]")
-      const activeSlide = slides.querySelector("[data-active]")
-      let newIndex = [...slides.children].indexOf(activeSlide) + offset
-      if (newIndex < 0) newIndex = slides.children.length - 1
-      if (newIndex >= slides.children.length) newIndex = 0
-      slides.children[newIndex].dataset.active = true
-      delete activeSlide.dataset.active
-    })
-  })
-}
+
 function carousel() {
   let buttonPrev = document.querySelector(".projects__button--prev")
   let buttonNext = document.querySelector(".projects__button--next")
@@ -69,9 +53,8 @@ function carousel() {
     document.querySelector("[data-active3]").getBoundingClientRect().x - 80
   let slideItem4 =
     document.querySelector("[data-active4]").getBoundingClientRect().x - 80
-  
+
   return buttonNext.addEventListener("click", () => {
-    
     switch (true) {
       case slideContainer.scrollLeft <= slideItem1:
         slideContainer.scrollTo(slideItem2, 0)
@@ -88,7 +71,25 @@ function carousel() {
     }
   })
 }
-carousel()
-projectsCarousel()
+function carouselSlide() {
+  const buttonNext = document.querySelector("[data-carousel-button='next']")
+  const slides = document.querySelector("#projects__container")
+  const activeSlide = slides.querySelector("[data-active]")
+  let index = [...slides.children].indexOf(activeSlide)
+  buttonNext.addEventListener("click", () => {
+    if (index < slides.children.length - 1) {
+      slides.scrollTo(slides.children[index + 1].getBoundingClientRect().x, 0)
+      index = index + 1
+      console.log(`pierwszy if ${index}`)
+    } else if (index >= slides.children.length - 1) {
+      slides.scrollTo(slides.children[0].getBoundingClientRect().x, 0)
+      index = 0
+      console.log(`drugi if ${index}`)
+    }
+  })
+}
+
+// carousel()
+carouselSlide()
 scrollYHideNav()
 scrollYChangeColor()
