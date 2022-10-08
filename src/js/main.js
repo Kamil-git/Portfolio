@@ -40,7 +40,6 @@ function scrollYChangeColor() {
   })
 }
 
-
 function carousel() {
   let buttonPrev = document.querySelector(".projects__button--prev")
   let buttonNext = document.querySelector(".projects__button--next")
@@ -73,20 +72,17 @@ function carousel() {
 }
 function carouselSlide() {
   const buttonNext = document.querySelector("[data-carousel-button='next']")
-  const slides = document.querySelector("#projects__container")
-  const activeSlide = slides.querySelector("[data-active]")
-  let index = [...slides.children].indexOf(activeSlide)
-  buttonNext.addEventListener("click", () => {
-    if (index < slides.children.length - 1) {
-      slides.scrollTo(slides.children[index + 1].getBoundingClientRect().x, 0)
-      index = index + 1
-      console.log(`pierwszy if ${index}`)
-    } else if (index >= slides.children.length - 1) {
-      slides.scrollTo(slides.children[0].getBoundingClientRect().x, 0)
-      index = 0
-      console.log(`drugi if ${index}`)
-    }
-  })
+  const slideContainer = document.querySelector("#projects__container")
+  let activeSlide = slideContainer.querySelector("[data-active]")
+  setTimeout(() => {
+    buttonNext.addEventListener("click", () => {
+      activeSlide = activeSlide.nextElementSibling
+      activeSlide !== null
+        ? slideContainer.scrollTo(activeSlide.getBoundingClientRect().x, 0)
+        : (activeSlide = slideContainer.children[0])
+      slideContainer.scrollTo(activeSlide.getBoundingClientRect().x, 0)
+    })
+  }, 500)
 }
 
 // carousel()
