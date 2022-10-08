@@ -74,13 +74,18 @@ function carouselSlide() {
   const buttonNext = document.querySelector("[data-carousel-button='next']")
   const slideContainer = document.querySelector("#projects__container")
   let activeSlide = slideContainer.querySelector("[data-active]")
+  const projectSection = document.querySelector("#projects")
+  const paddingContainer = window
+    .getComputedStyle(projectSection, null)
+    .getPropertyValue("padding-left")
+    .split("px")[0] 
   setTimeout(() => {
     buttonNext.addEventListener("click", () => {
       activeSlide = activeSlide.nextElementSibling
       activeSlide !== null
-        ? slideContainer.scrollTo(activeSlide.getBoundingClientRect().x, 0)
+        ? slideContainer.scrollTo(activeSlide.getBoundingClientRect().x - paddingContainer, 0)
         : (activeSlide = slideContainer.children[0])
-      slideContainer.scrollTo(activeSlide.getBoundingClientRect().x, 0)
+      slideContainer.scrollTo(activeSlide.getBoundingClientRect().x - paddingContainer, 0)
     })
   }, 500)
 }
