@@ -87,7 +87,7 @@ function carouselSlide() {
         : (activeSlide = slideContainer.children[0])
       slideContainer.scrollTo(activeSlide.getBoundingClientRect().x - paddingContainer, 0)
     })
-  }, 500)
+  }, 1000)
 }
 
 // carousel()
